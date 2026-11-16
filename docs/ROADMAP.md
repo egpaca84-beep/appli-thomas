@@ -5,7 +5,7 @@ Règle : on fait les étapes **dans l'ordre**. Une étape est cochée seulement 
 
 ## Phase A — Base de travail saine
 
-- [ ] **A1. Outils de vérification installés**
+- [ ] **A1. Outils de vérification installés** (fait le 16/11 : `npm install` fait, `npm run check` s'exécute — à cocher par Thomas)
   - Node.js déjà installé sur le PC : vérifier que `node -v` répond dans le terminal de VS Code.
   - `npm install` fait dans le dossier du projet.
   - Fin : `npm run check` s'exécute. Les erreurs de lint existantes sont listées (pas forcément corrigées).
@@ -16,7 +16,7 @@ Règle : on fait les étapes **dans l'ordre**. Une étape est cochée seulement 
   - ⬜ Créer le dépôt sur GitHub et y envoyer le code.
   - Fin : `git status` propre, le code est visible sur GitHub, `node_modules` n'y est pas.
 
-- [ ] **A3. Erreurs de lint corrigées**
+- [ ] **A3. Erreurs de lint corrigées** (fait le 16/11 : `wxText` et `needText` supprimées, 0 erreur ; à tester sur téléphone après publication : tous les écrans s'ouvrent)
   - Fin : `npm run lint` affiche 0 erreur. L'appli fonctionne comme avant (tour de tous les écrans).
 
 - [ ] **A4. `LISEZMOI.md` complété**
@@ -84,4 +84,6 @@ Ordre proposé ; chaque étape devra recevoir un critère de fin précis avant d
 |---|---|---|
 | 16/11/2026 | — | Création de CLAUDE.md, docs/ARCHITECTURE.md, docs/ROADMAP.md, config lint et tests de base |
 | 16/11/2026 | A2 | Projet déplacé dans C:\APLI\code-appli, dépôt Git créé |
+| 16/11/2026 | A1, A3 | npm install fait ; 2 fonctions mortes supprimées (0 erreur de lint, 5 avertissements de complexité restants) |
+| 16/11/2026 | — | File de prompts adaptée dans C:\APLI\file-de-prompts |
 | 16/11/2026 | — | Ajout de l'étape A5 (appli en ligne sur le téléphone) ; test sur téléphone obligatoire dans chaque vérification |

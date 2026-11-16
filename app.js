@@ -307,15 +307,6 @@ function loadWxFor(lieux) {
   });
 }
 
-function wxText(lieux, date) {
-  return lieux.map((l) => {
-    const s = wxSummary(l, date);
-    if (s.loading) return l.name + " : météo en cours de chargement.";
-    if (s.error) return l.name + " : météo indisponible.";
-    const gh = s.hours.filter((h) => h.gust != null).map((h) => h.hr + "h " + Math.round(h.gust)).join(", ");
-    return `${l.name} : ${s.tmin}° à ${s.tmax}°, pluie ${s.rain} mm, vent moyen max ${s.wind} km/h, rafales par heure (km/h) : ${gh}. Décision nacelle calculée : ${s.decision.text}.`;
-  }).join("\n");
-}
 
 /* ---------------------------------------------------------------------
    6. Claude, sans API
@@ -1199,10 +1190,6 @@ function needList() {
     out.push({ key: "o:" + o.id, orderId: o.id, itemId: o.itemId, cat: o.cat, name: o.name, detail: [o.qty ? "qté " + o.qty : "", o.source ? "noté " + o.source : ""].filter(Boolean).join(" · "), manual: true });
   });
   return out;
-}
-function needText() {
-  const n = needList();
-  return n.length ? n.map((x) => "- [" + CAT_LABEL[x.cat] + "] " + x.name + (x.detail ? " (" + x.detail + ")" : "")).join("\n") : "rien";
 }
 function findItem(name) { const n = name.trim().toLowerCase(); return S.stock.items.find((i) => i.name.trim().toLowerCase() === n); }
 

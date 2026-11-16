@@ -3,15 +3,16 @@
 À lire au début de chaque session. Ces règles priment sur tout le reste.
 
 ## Méthode de travail
-1. **Une seule tâche à la fois** : la première case non cochée de `docs/ROADMAP.md`. Rien d'autre.
+1. **Une seule tâche à la fois** : celle demandée par Thomas (ou, sans demande précise, la première case non cochée de `docs/ROADMAP.md`). Rien d'autre.
 2. **Avant de coder** : relire la tâche, son critère de fin et la partie concernée de `docs/ARCHITECTURE.md`. Si quelque chose est flou, poser la question à Thomas avant d'écrire du code.
 3. **Pendant** : changer le minimum de fichiers possible. Pas de nouvelle bibliothèque sans l'accord de Thomas.
 4. **Vérification obligatoire avant de cocher** :
    - `npm run check` passe (lint + tests), sans erreur ;
-   - le critère de fin de la tâche est vérifié pour de vrai **sur le téléphone** (l'appli est faite pour lui ; le navigateur du PC ne suffit pas) ;
+   - le critère de fin est vérifié par Thomas **sur le téléphone**, après publication (le navigateur du PC ne suffit pas) ;
    - relecture de simplification : code mort, doublons, fonctions trop longues, noms flous → corriger.
 5. **Ne jamais passer à la tâche suivante** si une vérification échoue. Corriger d'abord.
-6. **Après** : cocher la tâche, noter la date et ce qui a changé dans le journal en bas de `docs/ROADMAP.md`, mettre à jour `docs/ARCHITECTURE.md` si la structure a changé.
+6. **Cocher** : seul Thomas coche une étape de `docs/ROADMAP.md`, après son test sur le téléphone. Claude écrit à côté « (fait le JJ/MM, à tester sur téléphone : … ) ».
+7. **Après** : noter la date et ce qui a changé dans le journal en bas de `docs/ROADMAP.md`, mettre à jour `docs/ARCHITECTURE.md` si la structure a changé.
 
 ## Règles de code
 - JavaScript pur, sans framework ni étape de compilation : les fichiers sont servis tels quels par GitHub Pages.
