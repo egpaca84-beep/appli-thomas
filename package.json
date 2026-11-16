@@ -1,0 +1,16 @@
+{
+  "name": "appli-chef-equipe-egpaca",
+  "private": true,
+  "type": "module",
+  "description": "Appli perso de Thomas — chef d'équipe EG PACA",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node --test",
+    "check": "npm run lint && npm run test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0"
+  }
+}
