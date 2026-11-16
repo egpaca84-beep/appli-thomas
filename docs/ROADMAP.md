@@ -67,8 +67,15 @@ Règle : on fait les étapes **dans l'ordre**. Une étape est cochée seulement 
 - [ ] **C4. Portée Google Drive** : étudier le passage de `drive` (tout le Drive) à une portée plus étroite.
   - Fin : décision notée ici avec la raison.
 
-## Phase D — Nouvelles fonctionnalités
-À définir avec Thomas une fois les phases A à C terminées. Chaque fonctionnalité = une étape avec critère de fin.
+## Phase D — Fonctionnalités de la vision (voir `docs/VISION.md`)
+Ordre proposé ; chaque étape devra recevoir un critère de fin précis avant d'être commencée.
+
+- [ ] **D1. Emplacement des outils** : chaque outil/matériel a un endroit (atelier, camion, chantier, prêté à…), modifiable.
+- [ ] **D2. Débrief du soir complété** : questions « RDV pris », « à faire demain », puis vérification des emplacements (tout confirmer d'un geste, ou corriger).
+- [ ] **D3. Bouton « Démarrer le brief »** : à faire + comment, listes à prendre (partir / atelier / fournisseur), mini-révision.
+- [ ] **D4. Révision : nouvelles matières** : maths, physique, matériel ; élocution « explication concise ».
+- [ ] **D5. Imprévu relié au prévu** : solutions, ordres modifiés, compte rendu modifié.
+- [ ] **D6. Conversation** : selon la décision notée dans VISION.md.
 
 ---
 

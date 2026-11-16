@@ -27,6 +27,7 @@
 - Ne jamais inventer une norme, un seuil ou une procédure dans les textes de l'appli ou les prompts.
 
 ## Où trouver quoi
+- `docs/VISION.md` : ce que Thomas attend de l'appli. Toute fonctionnalité doit y correspondre.
 - `docs/ARCHITECTURE.md` : découpage de l'appli, données, services externes.
 - `docs/ROADMAP.md` : les étapes, à faire dans l'ordre.
 - `LISEZMOI.md` : mise en ligne et branchements (Google, Claude), pour Thomas.
