@@ -13,7 +13,7 @@ Règle : on fait les étapes **dans l'ordre**. Une étape est cochée seulement 
 - [ ] **A2. Projet sous Git, hors de OneDrive**
   - ✅ Projet copié dans `C:\APLI\code-appli` (hors OneDrive), `git init` et premier commit faits le 16/11/2026.
   - ⬜ Ouvrir `C:\APLI\code-appli` dans VS Code (et plus l'ancien dossier OneDrive).
-  - ⬜ Créer le dépôt sur GitHub et y envoyer le code.
+  - ✅ Dépôt GitHub `egpaca84-beep/appli-thomas` créé et code envoyé le 20/11/2026.
   - Fin : `git status` propre, le code est visible sur GitHub, `node_modules` n'y est pas.
 
 - [ ] **A3. Erreurs de lint corrigées** (fait le 16/11 : `wxText` et `needText` supprimées, 0 erreur ; à tester sur téléphone après publication : tous les écrans s'ouvrent)
@@ -86,4 +86,5 @@ Ordre proposé ; chaque étape devra recevoir un critère de fin précis avant d
 | 16/11/2026 | A2 | Projet déplacé dans C:\APLI\code-appli, dépôt Git créé |
 | 16/11/2026 | A1, A3 | npm install fait ; 2 fonctions mortes supprimées (0 erreur de lint, 5 avertissements de complexité restants) |
 | 16/11/2026 | — | File de prompts adaptée dans C:\APLI\file-de-prompts |
+| 20/11/2026 | A2 | Dépôt GitHub egpaca84-beep/appli-thomas, premier envoi |
 | 16/11/2026 | — | Ajout de l'étape A5 (appli en ligne sur le téléphone) ; test sur téléphone obligatoire dans chaque vérification |
