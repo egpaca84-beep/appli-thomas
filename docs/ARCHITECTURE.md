@@ -26,6 +26,9 @@ Claude ──dépose──> Drive/Appli Thomas/boite-claude/*.json ──lu par�
 | `tests/` | Tests automatiques (`node --test`) |
 | `docs/` | Architecture et feuille de route |
 
+## File de prompts
+La file de prompts est la liste de tâches confiées une par une à Claude Code pour faire évoluer l'appli : chaque tâche a sa propre session, le travail s'accumule dans les fichiers, et une seule mise à jour est publiée à la fin de la file.
+
 ## Sections actuelles de `app.js`
 1. **Stockage** — `defaults()` (forme des données), `loadState()`, `save()`, état d'écran `U` (non sauvegardé).
 2. **Outils** — dates (`todayStr`, `addDays`, `mondayOf`…), `esc()` (protection HTML), `uid()`, `toast()`.
