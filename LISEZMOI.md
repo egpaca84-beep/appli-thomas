@@ -4,7 +4,7 @@ Appli perso de Thomas, installable sur le téléphone. Elle n'utilise pas l'API 
 
 ## Comment ça marche
 
-- L'appli écrit tout son état dans `etat-appli.json`, dans le dossier Drive « Appli Thomas » (Drive OIKOS). C'est aussi la sauvegarde.
+- L'appli écrit tout son état dans `etat-appli.json`, dans le dossier Drive « Appli Thomas » (Drive EG.PACA, partagé en éditeur avec le compte OIKOS qu'utilise Claude). C'est aussi la sauvegarde.
 - Claude lit ce fichier, et dépose ses réponses (brief, actions, questions de révision, exercices et notes d'élocution) dans le sous-dossier `boite-claude`.
 - À chaque synchronisation, l'appli récupère ce que Claude a déposé.
 - Chaque matin du lundi au vendredi à 5h45, une tâche programmée Claude prépare le brief, les questions de révision et les exercices d'élocution.
@@ -25,7 +25,7 @@ Appli perso de Thomas, installable sur le téléphone. Elle n'utilise pas l'API 
 
 ## Mise en route
 
-1. **Partager le dossier** « Appli Thomas » du Drive OIKOS avec l'adresse Gmail perso de Thomas, en tant qu'éditeur.
+1. **Dossier Drive** : « Appli Thomas » et son sous-dossier `boite-claude` sont sur le Drive EG.PACA, partagés en éditeur avec le compte OIKOS (celui du connecteur Drive de Claude). Google Cloud et la connexion dans l'appli se font avec le compte EG.PACA.
 2. **Google Cloud** (console.cloud.google.com), avec le compte perso de Thomas : créer un projet, activer « Gmail API » et « Google Drive API », écran de consentement en Externe / mode Test avec son adresse comme utilisateur test, puis un ID client OAuth « Application Web » avec comme origine l'adresse GitHub Pages (`https://TONPSEUDO.github.io`). Coller l'ID dans les Réglages.
 3. **GitHub Pages** : dépôt public contenant seulement les fichiers de ce dossier `code-appli` (jamais « document utile »). Settings > Pages > branche `main`, dossier racine.
 4. Sur le téléphone : ouvrir l'adresse, « Ajouter à l'écran d'accueil », puis Synchroniser une première fois.

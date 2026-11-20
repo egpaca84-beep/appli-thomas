@@ -11,7 +11,7 @@ L'appli **n'appelle pas l'API Claude**. Claude travaille dans le projet claude.a
 « Assistant de chef d'équipe » et échange avec l'appli par fichiers sur le Drive :
 
 ```
-Téléphone (appli) ──écrit──> Drive/Appli Thomas/<fichier d'état>.json ──lu par──> Claude
+Téléphone (appli) ──écrit──> Drive EG.PACA/Appli Thomas/<fichier d'état>.json ──lu par──> Claude
 Claude ──dépose──> Drive/Appli Thomas/boite-claude/*.json ──lu par──> appli (à la synchro)
 ```
 

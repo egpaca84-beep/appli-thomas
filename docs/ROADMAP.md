@@ -86,5 +86,6 @@ Ordre proposé ; chaque étape devra recevoir un critère de fin précis avant d
 | 16/11/2026 | A2 | Projet déplacé dans C:\APLI\code-appli, dépôt Git créé |
 | 16/11/2026 | A1, A3 | npm install fait ; 2 fonctions mortes supprimées (0 erreur de lint, 5 avertissements de complexité restants) |
 | 16/11/2026 | — | File de prompts adaptée dans C:\APLI\file-de-prompts |
+| 20/11/2026 | — | Dossier Drive déplacé sur le Drive EG.PACA (nouveaux identifiants dans app.js, tâche du matin et mode d'emploi Claude) |
 | 20/11/2026 | A2 | Dépôt GitHub egpaca84-beep/appli-thomas, premier envoi |
 | 16/11/2026 | — | Ajout de l'étape A5 (appli en ligne sur le téléphone) ; test sur téléphone obligatoire dans chaque vérification |

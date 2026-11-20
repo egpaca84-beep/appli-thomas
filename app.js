@@ -316,8 +316,8 @@ function loadWxFor(lieux) {
    L'appli les récupère à chaque synchronisation.
    --------------------------------------------------------------------- */
 const PROJECT_URL_DEFAULT = "https://claude.ai/project/01a1a12f-fd7b-7674-b13e-efd5911bac61";
-const ROOT_FOLDER_DEFAULT = "1zQEOD_IXSt94clJrGu6hsL2mHrkVLOgI";   // Drive : Appli Thomas
-const BOX_FOLDER_DEFAULT = "1sm_z5hHSRrZy033YFe4uld-8UDmSS1tm";    // Drive : Appli Thomas/boite-claude
+const ROOT_FOLDER_DEFAULT = "12drsNMfwPmie1n2CzXBtfhmI6TpRXkhy";   // Drive EG.PACA : Appli Thomas
+const BOX_FOLDER_DEFAULT = "1pGTiJ4Nqmq684Of0gwvnPELXMhViD-uP";    // Drive EG.PACA : Appli Thomas/boite-claude
 
 /* Ouvre le projet dans l'appli Claude. Le texte éventuel est copié pour être collé. */
 function openClaude(text) {
@@ -1284,7 +1284,7 @@ function vReglages() {
   <div class="card"><span class="over">Google (Gmail et Drive)</span>
     <label class="lbl" for="setGoogle">ID client OAuth</label>
     <input class="input" id="setGoogle" autocomplete="off" placeholder="….apps.googleusercontent.com" value="${esc(st.googleClientId)}">
-    <span class="muted">Connecte-toi avec ton compte Google perso. Le dossier « Appli Thomas » du Drive OIKOS doit être partagé avec lui.</span></div>
+    <span class="muted">Connecte-toi avec le compte Google EG.PACA (propriétaire du dossier « Appli Thomas »).</span></div>
   <div class="card"><span class="over">Claude</span>
     <label class="lbl" for="setProject">Lien du projet Claude</label>
     <input class="input" id="setProject" autocomplete="off" value="${esc(st.projectUrl || PROJECT_URL_DEFAULT)}">
