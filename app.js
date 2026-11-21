@@ -318,6 +318,9 @@ function loadWxFor(lieux) {
 const PROJECT_URL_DEFAULT = "https://claude.ai/project/01a1a12f-fd7b-7674-b13e-efd5911bac61";
 const ROOT_FOLDER_DEFAULT = "12drsNMfwPmie1n2CzXBtfhmI6TpRXkhy";   // Drive EG.PACA : Appli Thomas
 const BOX_FOLDER_DEFAULT = "1pGTiJ4Nqmq684Of0gwvnPELXMhViD-uP";    // Drive EG.PACA : Appli Thomas/boite-claude
+// ID client OAuth public (projet Google Cloud « Appli Thomas », compte EG.PACA). Ce n'est pas un secret.
+const GOOGLE_CLIENT_DEFAULT = "631336527654-kiovoa5bh95l6873n9j5pe8hlvqeds4s.apps.googleusercontent.com";
+const googleClientId = () => S.settings.googleClientId || GOOGLE_CLIENT_DEFAULT;
 
 /* Ouvre le projet dans l'appli Claude. Le texte éventuel est copié pour être collé. */
 function openClaude(text) {
@@ -403,10 +406,10 @@ function googleToken(interactive = true) {
   return new Promise((resolve, reject) => {
     if (gToken && Date.now() < gExp - 60000) return resolve(gToken);
     if (!interactive) return reject(new Error("Pas connecté à Google."));
-    if (!S.settings.googleClientId) return reject(new Error("ID client Google à renseigner dans les réglages."));
+    if (!googleClientId()) return reject(new Error("ID client Google à renseigner dans les réglages."));
     if (!window.google || !google.accounts || !google.accounts.oauth2) return reject(new Error("Google n'est pas encore chargé, réessaie dans une seconde."));
     const tc = google.accounts.oauth2.initTokenClient({
-      client_id: S.settings.googleClientId,
+      client_id: googleClientId(),
       scope: G_SCOPES,
       callback: (r) => {
         if (r.error) return reject(new Error("Connexion Google refusée."));
@@ -1093,7 +1096,7 @@ function vMails() {
     Compte : <b>${esc(m ? m.account : "non connecté")}</b><br>
     Dernière récupération : <b>${m ? esc(fmtDateTime(m.fetchedAt)) : "jamais"}</b><br>
     Effacement et nouvelle récupération : <b>${m ? esc(fmtDateTime(m.fetchedAt + MAIL_WINDOW_MS)) : "—"}</b></span></div>`;
-  if (!S.settings.googleClientId) {
+  if (!googleClientId()) {
     html += `<div class="card"><b>Gmail pas encore branché</b><span class="muted">Ajoute l'ID client Google dans les réglages.</span><button class="btn ghost" data-action="go" data-to="reglages">Ouvrir les réglages</button></div>`;
     return html;
   }
@@ -1283,7 +1286,7 @@ function vReglages() {
   return head("Réglages") + `
   <div class="card"><span class="over">Google (Gmail et Drive)</span>
     <label class="lbl" for="setGoogle">ID client OAuth</label>
-    <input class="input" id="setGoogle" autocomplete="off" placeholder="….apps.googleusercontent.com" value="${esc(st.googleClientId)}">
+    <input class="input" id="setGoogle" autocomplete="off" placeholder="….apps.googleusercontent.com" value="${esc(googleClientId())}">
     <span class="muted">Connecte-toi avec le compte Google EG.PACA (propriétaire du dossier « Appli Thomas »).</span></div>
   <div class="card"><span class="over">Claude</span>
     <label class="lbl" for="setProject">Lien du projet Claude</label>
