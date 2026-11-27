@@ -19,15 +19,15 @@ Règle : on fait les étapes **dans l'ordre**. Une étape est cochée seulement 
 - [x] **A3. Erreurs de lint corrigées** (validé par Thomas sur le téléphone le 27/11 : tous les écrans s'ouvrent)
   - Fin : `npm run lint` affiche 0 erreur. L'appli fonctionne comme avant (tour de tous les écrans).
 
-- [ ] **A4. `LISEZMOI.md` complété**
+- [ ] **A4. `LISEZMOI.md` complété** (fait le 27/11 : comptes, adresses et publication à jour — à cocher par Thomas après relecture)
   - Le contenu (version 2, sans API) est à jour. Ajouter une section « Développement » : dossier de travail, `npm install`, `npm run check`, publication.
   - Fin : chaque étape du LISEZMOI correspond à un écran, un réglage ou une commande qui existe vraiment.
 
-- [ ] **A5. Appli en ligne et ouverte sur le téléphone** (27/11 : en ligne, synchro Drive OK dans les deux sens ; reste à confirmer : installation sur l'écran d'accueil et météo)
+- [x] **A5. Appli en ligne et ouverte sur le téléphone** (validé par Thomas le 27/11 : installée, météo et synchro OK)
   - GitHub Pages activé, adresse `https://<pseudo>.github.io/<dépôt>/` ajoutée comme origine autorisée dans Google Cloud.
   - Fin : sur le téléphone, l'appli s'ouvre, s'installe sur l'écran d'accueil, la météo s'affiche et la synchro Drive marche.
 
-- [ ] **A6. Vérification automatique sur GitHub**
+- [ ] **A6. Vérification automatique sur GitHub** (fait le 27/11 : `.github/workflows/check.yml` — à cocher par Thomas quand la coche verte apparaît)
   - Ajouter `.github/workflows/check.yml` qui lance `npm run check` à chaque envoi.
   - Fin : la coche verte apparaît sur GitHub après un envoi ; une erreur volontaire la fait passer au rouge.
 
@@ -86,6 +86,7 @@ Ordre proposé ; chaque étape devra recevoir un critère de fin précis avant d
 | 16/11/2026 | A2 | Projet déplacé dans C:\APLI\code-appli, dépôt Git créé |
 | 16/11/2026 | A1, A3 | npm install fait ; 2 fonctions mortes supprimées (0 erreur de lint, 5 avertissements de complexité restants) |
 | 16/11/2026 | — | File de prompts adaptée dans C:\APLI\file-de-prompts |
+| 27/11/2026 | A4, A5, A6 | A5 validé ; LISEZMOI mis à jour ; vérification automatique GitHub ajoutée |
 | 27/11/2026 | A1, A2, A3 | Validés par Thomas. Appli en ligne (GitHub Pages), synchro testée : etat-appli.json écrit, message test de la boîte Claude reçu |
 | 21/11/2026 | A5 | Projet Google Cloud « Appli Thomas » (compte EG.PACA), ID client OAuth intégré par défaut dans app.js |
 | 20/11/2026 | — | Dossier Drive déplacé sur le Drive EG.PACA (nouveaux identifiants dans app.js, tâche du matin et mode d'emploi Claude) |

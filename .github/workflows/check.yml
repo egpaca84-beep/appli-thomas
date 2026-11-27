@@ -1,0 +1,19 @@
+# Vérification automatique : à chaque envoi sur GitHub, lance npm run check (lint + tests).
+# Résultat visible sur la page du dépôt : coche verte = OK, croix rouge = à corriger.
+name: Vérification
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: lts/*
+          cache: npm
+      - run: npm ci
+      - run: npm run check

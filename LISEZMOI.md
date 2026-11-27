@@ -26,9 +26,9 @@ Appli perso de Thomas, installable sur le téléphone. Elle n'utilise pas l'API 
 ## Mise en route
 
 1. **Dossier Drive** : « Appli Thomas » et son sous-dossier `boite-claude` sont sur le Drive EG.PACA, partagés en éditeur avec le compte OIKOS (celui du connecteur Drive de Claude). Google Cloud et la connexion dans l'appli se font avec le compte EG.PACA.
-2. **Google Cloud** (console.cloud.google.com), avec le compte perso de Thomas : créer un projet, activer « Gmail API » et « Google Drive API », écran de consentement en Externe / mode Test avec son adresse comme utilisateur test, puis un ID client OAuth « Application Web » avec comme origine l'adresse GitHub Pages (`https://TONPSEUDO.github.io`). Coller l'ID dans les Réglages.
-3. **GitHub Pages** : dépôt public contenant seulement les fichiers de ce dossier `code-appli` (jamais « document utile »). Settings > Pages > branche `main`, dossier racine.
-4. Sur le téléphone : ouvrir l'adresse, « Ajouter à l'écran d'accueil », puis Synchroniser une première fois.
+2. **Google Cloud** (console.cloud.google.com), compte EG.PACA : projet « Appli Thomas », « Gmail API » et « Google Drive API » activées, écran de consentement Externe en mode Test avec eg.paca84 comme utilisateur test, ID client OAuth « Application Web » avec l'origine `https://egpaca84-beep.github.io`. Cet ID est déjà inscrit dans `app.js` (modifiable dans les Réglages).
+3. **GitHub** : dépôt public `egpaca84-beep/appli-thomas`, contenant seulement le dossier `code-appli` (jamais « document utile »). Pages : branche `main`, dossier racine. Adresse de l'appli : https://egpaca84-beep.github.io/appli-thomas/
+4. Sur le téléphone : ouvrir l'adresse, « Ajouter à l'écran d'accueil », puis Synchroniser une première fois avec le compte eg.paca84.
 
 Google affichera « appli non validée » : normal pour une appli perso, cliquer sur Continuer.
 
@@ -54,4 +54,7 @@ Google affichera « appli non validée » : normal pour une appli perso, cliquer
 - Une seule fois : `npm install` (dans le terminal de VS Code, ouvert dans le dossier).
 - Après chaque modification : `npm run check` (contrôle du code + tests). Rien n'est envoyé sur GitHub si ça échoue.
 - Chaque étape se vérifie sur le téléphone, pas seulement sur le PC.
+- Publier : `git push` (ou le bouton « Publier sur le téléphone » de la file de prompts). GitHub relance `npm run check` à chaque envoi : coche verte sur la page du dépôt = OK, croix rouge = à corriger. L'appli en ligne change 1 à 2 minutes après.
+- Sur le téléphone, après une publication : fermer complètement l'appli puis la rouvrir.
+- Pour enchaîner des tâches avec Claude Code : `C:\APLI\file-de-prompts` (voir son LISEZMOI).
 
