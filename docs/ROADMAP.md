@@ -27,7 +27,7 @@ Règle : on fait les étapes **dans l'ordre**. Une étape est cochée seulement 
   - GitHub Pages activé, adresse `https://<pseudo>.github.io/<dépôt>/` ajoutée comme origine autorisée dans Google Cloud.
   - Fin : sur le téléphone, l'appli s'ouvre, s'installe sur l'écran d'accueil, la météo s'affiche et la synchro Drive marche.
 
-- [ ] **A6. Vérification automatique sur GitHub** (fait le 27/11 : `.github/workflows/check.yml` — à cocher par Thomas quand la coche verte apparaît)
+- [x] **A6. Vérification automatique sur GitHub** (validé le 27/11 : coche verte sur le commit 315734c)
   - Ajouter `.github/workflows/check.yml` qui lance `npm run check` à chaque envoi.
   - Fin : la coche verte apparaît sur GitHub après un envoi ; une erreur volontaire la fait passer au rouge.
 
